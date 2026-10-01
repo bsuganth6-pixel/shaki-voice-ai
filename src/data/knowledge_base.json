@@ -1,0 +1,20 @@
+{
+  "schemes": [
+    {
+      "id": "pm_ujjwala_yojana",
+      "name": "PM Ujjwala Yojana (Free LPG Connection)",
+      "description": "Provides free LPG connections to women from BPL families.",
+      "eligibility": { "gender": "female", "minAge": 18, "incomeLevel": "bpl", "hasExistingConnection": false },
+      "documentsRequired": ["Aadhaar Card", "BPL Ration Card", "Bank Account Details", "Passport Size Photograph"],
+      "officialUrl": "https://www.pmuy.gov.in/"
+    },
+    {
+      "id": "kalaignar_magalir_urimai",
+      "name": "Kalaignar Magalir Urimai Thittam",
+      "description": "Provides monthly financial assistance to eligible women heads of families in Tamil Nadu.",
+      "eligibility": { "gender": "female", "minAge": 21, "state": "tamil_nadu", "maxAnnualIncome": 250000, "maxLandOwnershipAcres": 5 },
+      "documentsRequired": ["Aadhaar Card", "Family Ration Card", "Income Certificate", "Bank Passbook"],
+      "officialUrl": "https://www.tn.gov.in/"
+    }
+  ]
+}
