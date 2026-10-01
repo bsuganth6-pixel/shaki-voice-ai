@@ -1,4 +1,30 @@
-export type Lang = 'en' | 'ta' | 'hi';
+export type Lang =
+  | 'en'
+  | 'ta'
+  | 'hi'
+  | 'te'
+  | 'kn'
+  | 'ml'
+  | 'mr'
+  | 'bn'
+  | 'gu'
+  | 'or'
+  | 'pa';
+
+export interface LanguageMeta {
+  code: Lang;
+  label: string;
+  nativeName: string;
+  englishName: string;
+  locale: string;
+  speech: string;
+  direction: 'ltr' | 'rtl';
+  uiSupport: boolean;
+  speechRecognitionSupport: boolean;
+  speechOutputSupport: boolean;
+  aiSupport: boolean;
+  availability: 'available' | 'planned' | 'limited';
+}
 
 export interface UserState {
   gender?: 'female' | 'male' | 'other';
@@ -20,6 +46,12 @@ export interface EligibilityRules {
   maxLandOwnershipAcres?: number;
 }
 
+export interface SourceInfo {
+  organization: string;
+  url: string;
+  verifiedAt: string; // ISO date string
+}
+
 export interface Scheme {
   id: string;
   name: string;
@@ -27,6 +59,8 @@ export interface Scheme {
   eligibility: EligibilityRules;
   documentsRequired: string[];
   officialUrl: string;
+  source: SourceInfo;
+  lastReviewed: string; // ISO date string
 }
 
 export interface Verdict {
